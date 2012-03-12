@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?> 
+
+ <!-- En este archivo se declaran todas los colores que se usaran en la
+ 		aplicación, la propiedad name es el identificador del color
+ 		y el valor del color se expresa en hexadecimal -->
+<resources>
+<color name="color1">#ffffffff</color> 
+<color name="color2">#0f0</color> 
+<color name="color3">#00FFFF</color>
+<color name="background">#00000000</color>
+</resources>

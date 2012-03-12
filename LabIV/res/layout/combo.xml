@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <!-- Se utiliza un elemento del tipo Spinner que es como un ComboBox para seleccionar el usuario -->
+	<Spinner
+    	android:id="@+id/miSpinner"
+    	android:layout_height="wrap_content"
+    	android:layout_width="fill_parent"
+    	android:prompt="@string/selectorUsuario" />
+	
+	 <!-- Hay 3 botones para establecer parametros, uno para la hora inicial, final y fecha para la busqueda en la base de datos -->
+	 <TableLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center_vertical|center_horizontal"
+    	android:layout_below = "@+id/miSpinner">
+    <TableRow android:gravity="center_vertical|center_horizontal">
+    	<Button
+        	android:id="@+id/HoraInicial"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/HoraInicialString" />
+    	
+    	<Button
+        	android:id="@+id/HoraFinal"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/HoraFinalString"/>
+	
+		<Button
+    	    android:id="@+id/Fecha"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/FechaString" />
+    </TableRow>
+	</TableLayout>
+
+</RelativeLayout>

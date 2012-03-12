@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ 
+    <!-- Arreglo con el que se llena ListPreference, en preferencias.xml -->
+  <string-array name="batteryAct">
+    <item>Desactivar</item>
+    <item>Cambiar a ahorro de energía</item>
+  </string-array>
+ 
+  <!-- Identificador para cada elemento del ListPreference, en preferencias.xml -->
+  <string-array name="batteryAct_codes">
+    <item>DESACTIVAR</item>
+    <item>AHORRO</item>
+  </string-array>
+</resources>

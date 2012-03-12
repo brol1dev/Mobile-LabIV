@@ -1,0 +1,21 @@
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="Ahorro de Batería">
+    <CheckBoxPreference
+      android:key="provider" 
+      android:title="Modo ahorro de batería"   />
+
+     <CheckBoxPreference
+      android:key="battery"
+      android:title="Batería baja"
+      android:summary="Ahorrar batería cuando el nivel sea menor al 15%"   />
+      
+    <ListPreference
+      android:key="batteryAction"
+      android:title="Seleccionar acción"
+      android:summary="Elegir detener captura o cambiar a Modo ahorro de energía"
+      android:entries="@array/batteryAct"
+      android:entryValues="@array/batteryAct_codes"
+      android:dialogTitle="¿Qué desea hacer?" />
+  </PreferenceCategory>
+</PreferenceScreen>

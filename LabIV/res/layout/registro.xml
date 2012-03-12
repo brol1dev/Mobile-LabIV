@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+		android:id="@+id/usr_Sim"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"/>
+	
+	<TextView
+		android:id="@+id/dia"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/usr_Sim"/>
+	
+	<TextView
+		android:id="@+id/tiempoEnSeg"
+		android:layout_marginLeft="15dp"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	   android:layout_toRightOf="@id/dia"
+	      android:layout_below="@id/usr_Sim"/>
+	    
+	<TextView
+		android:id="@+id/latitud"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textColor="@color/color2"
+	    android:layout_below="@id/tiempoEnSeg"/>
+	    
+	<TextView
+		android:id="@+id/longitud"
+		android:layout_marginLeft="15dp"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/latitud"
+	     android:textColor="@color/color2"
+	    android:layout_below="@id/tiempoEnSeg"/>
+        
+</RelativeLayout>

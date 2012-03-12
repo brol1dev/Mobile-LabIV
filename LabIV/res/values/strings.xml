@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Laboratorio IV</string>
+  <string name="app_title">Lab IV</string>
+  <string name="button_map">Map</string>
+  <string name="button_stop_tracking">Stop Tracking</string>
+  <string name="button_start_tracking">Start Tracking</string>
+  <string name="Datos">Ver Registros</string>
+  
+      <string name="Inicio">Mapa</string>
+    <string name="menumapa">Vista Mapa</string>
+    <string name="menusatelite">Vista Satelital</string>
+    <string name="menuRuta">Ruta</string>
+    <string name="menuHeatmap">Heatmap</string>
+    <string name="selectorUsuario">Seleccione un Usuario</string>
+    <string name="FechaString">Fecha</string>
+    <string name="AceptarString">Aceptar</string>
+    <string name="ResetString">Reset</string>
+    <string name="CancelarString">Cancelar</string>
+    <string name="HoraInicialString">H Inicial</string>
+    <string name="HoraFinalString">H Final</string>
+    <string name="TituloMapa">Mapa de Calor</string>
+    <string name="tituloDistancia">Distancia de separacion</string>
+    
+</resources>

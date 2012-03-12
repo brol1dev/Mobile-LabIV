@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <!-- El mapa a utilizar debe ser del tipo SimpleMapView proveniente de las clases que realizan el Heatmap -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/TituloMapa" />
+    
+	<com.androidnatic.maps.SimpleMapView
+	android:id="@+id/mapview"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:enabled="true"
+	android:clickable="true"
+	android:apiKey="0tWu8yUYeH-WA6nRMsBxjDy-1pCkPHviz-NxkeA"/>  
+</RelativeLayout>

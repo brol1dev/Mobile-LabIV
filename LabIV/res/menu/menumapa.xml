@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+   <item android:id="@+id/opcionMap"
+      android:title="@string/menumapa" android:orderInCategory="1" 
+      android:alphabeticShortcut="m">
+   </item>
+   <item android:id="@+id/opcionSatellite"
+      android:title="@string/menusatelite" 
+      android:orderInCategory="2" 
+      android:alphabeticShortcut="s">
+   </item>
+   <item android:id="@+id/opcionRuta"
+      android:title="@string/menuRuta" 
+      android:orderInCategory="3" 
+      android:alphabeticShortcut="h">
+   </item>
+   <item android:id="@+id/opcionHeatMap"
+      android:title="@string/menuHeatmap" 
+      android:orderInCategory="4" 
+      android:alphabeticShortcut="h">
+   </item>
+</menu>

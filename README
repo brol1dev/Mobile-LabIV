@@ -1,0 +1,7 @@
+Aplicacion Android para hacer un muestreo de las localicaciones.
+
+Revisar clase DBConfig.java para ver si se tienen bien puestos los parametros
+para conectarse a la base de datos remota.
+
+Tambien revisar que la apiKey en mapa.xml sea la correcta para el dispositivo
+usado.
