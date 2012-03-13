@@ -1,7 +1,6 @@
 package com.computomovil.labIV.remote;
 
 import org.apache.http.HttpStatus;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.computomovil.labIV.DBHelper;
@@ -20,6 +19,8 @@ public class DBSender {
 	 * Envia puntos de localizacion en la base de datos local
 	 * al servidor.
 	 * Ruta usada es http://serveraddress:8080/locations
+	 * 
+	 * @param context
 	 */
 	public static void sendLocations(Context context) {
 		String url = DBConfig.URL + DBConfig.GET_POST_LOCATIONS;
@@ -34,13 +35,11 @@ public class DBSender {
 			JSONObject json = JsonUtils.constructJSON(cursor);
 			cursor.close();
 			
-			Log.d("test", "hola");
 			if (json != null) {
 				Log.d("test", json.toString());
 				client.setParam(json.toString());
 				client.execute(RequestMethod.POST);
 				int responseCode = client.getResponseCode();
-				Log.d("response code", "code: " + responseCode);
 				if (responseCode == HttpStatus.SC_CREATED)
 					dbHelper.deleteDataInTable(db, "ubicaciones");
 			}

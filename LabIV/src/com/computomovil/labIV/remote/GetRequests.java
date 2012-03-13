@@ -10,6 +10,13 @@ import com.computomovil.labIV.bean.TimePoint;
 
 public class GetRequests {
 
+	/**
+	 * Obtiene todos los puntos (TimePoint) que se encuentren en un dia.
+	 * Hace la llamada al web service por medio de http://address:port/locations
+	 * 
+	 * @param day formato YYYY-MM-DD
+	 * @return List<TimePoint>
+	 */
 	public static List<TimePoint> getAllLocationsInDay(String day) {
 		String url = DBConfig.URL + DBConfig.GET_POST_LOCATIONS + "/" + day;
 		RestClient client = new RestClient(url);
@@ -29,6 +36,19 @@ public class GetRequests {
 		return points;
 	}
 	
+	/**
+	 * Obtiene los puntos (TimePoint) para un SIM, que se encuentren en el rango
+	 * de tiempo especificado para el dia dado.
+	 * Hace la llamada al web service por medio de
+	 * http://address:port/locations/{sim}/{day}/{start}/{end}
+	 * 
+	 * 
+	 * @param sim
+	 * @param day formato YYYY-MM-DD
+	 * @param start tiempo inicial en segundos
+	 * @param end tiempo final en segundos
+	 * @return List<TimePoint>
+	 */
 	public static List<TimePoint> getLocationsForSimInRange(String sim,
 			String day, int start, int end) {
 		String url = DBConfig.URL + DBConfig.GET_POST_LOCATIONS + "/" + sim +
@@ -49,6 +69,18 @@ public class GetRequests {
 		
 		return points;
 	}
+	
+	/**
+	 * Obtiene los puntos (HeatPoint) que se encuentren en el rango
+	 * de tiempo especificado para el dia dado.
+	 * Hace la llamada al web service por medio de
+	 * http://address:port/locations/{day}/{start}/{end}
+	 * 
+	 * @param day formato YYYY-MM-DD
+	 * @param start tiempo inicial en segundos
+	 * @param end tiempo final en segundos
+	 * @return List<HeatPoint>
+	 */
 	public static List<HeatPoint> getAllHeatLocationsInRange(String day, 
 			int start, int end) {
 		String url = DBConfig.URL + DBConfig.GET_POST_LOCATIONS + "/" + day +

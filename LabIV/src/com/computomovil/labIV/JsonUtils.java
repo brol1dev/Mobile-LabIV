@@ -16,7 +16,14 @@ import com.google.android.maps.GeoPoint;
 
 public class JsonUtils {
 
-	//"locations":[{"Id":0,"Sim":"String","Longitude":0,"Latitude":0,"Day":"String","Time":0}]}
+	/**
+	 * El cursor contiene los datos que existen en la base de datos local,
+	 * construye un objeto JSON en base a esta informacion.
+	 * 
+	 * @param cursor
+	 * @return JSONObject con formato {"locations":[{"Sim":"...",
+	 * "Day":"2012-03-12",...}]}
+	 */
 	public static JSONObject constructJSON(Cursor cursor) {
 		JSONObject jroot = null;
 		try {
@@ -49,10 +56,10 @@ public class JsonUtils {
 	}
 		
 	/**
-	 * Obtiene una lista de puntos de un objeto json
+	 * Obtiene una lista de TimePoints de un objeto json
 	 * 
 	 * @param jroot formato = {"locations": [{...}, {...}]}
-	 * @return
+	 * @return List<TimePoint>
 	 */
 	public static List<TimePoint> getLocationsFromJson(JSONObject jroot) {
 		List<TimePoint> points = new ArrayList<TimePoint>();
@@ -83,6 +90,12 @@ public class JsonUtils {
 		return points;
 	}
 	
+	/**
+	 * Obtiene una lista de HeatPoints de un objeto json
+	 * 
+	 * @param jroot formato = {"locations": [{...}, {...}]}
+	 * @return List<HeatPoint>
+	 */
 	public static List<HeatPoint> getHeatLocationsFromJson(JSONObject jroot) {
 		List<HeatPoint> points = new ArrayList<HeatPoint>();
 		JSONArray jlocations;
