@@ -7,6 +7,7 @@ public class DBConfig {
 
 	public static final String URL = "http://172.16.214.179:8080";
 	public static final String GET_POST_LOCATIONS = "/locations";
+	public static final String GET_USERS = "/users";
 	
 	private static HashMap<String, String> headers = new 
 			HashMap<String, String>();

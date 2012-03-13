@@ -7,9 +7,29 @@ import org.json.JSONObject;
 import com.androidnatic.maps.model.HeatPoint;
 import com.computomovil.labIV.JsonUtils;
 import com.computomovil.labIV.bean.TimePoint;
+import com.computomovil.labIV.bean.User;
 
 public class GetRequests {
 
+	public static List<User> getUsers() {
+		String url = DBConfig.URL + DBConfig.GET_USERS;
+		List<User> users;
+		RestClient client = new RestClient(url);
+		
+		DBConfig.setHeaders(client);
+		try {
+			client.execute(RequestMethod.GET);
+			String response = client.getResponse();
+			JSONObject json = new JSONObject(response);
+			users = JsonUtils.getUsersFromJson(json);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+		return users;
+	}
+	
 	/**
 	 * Obtiene todos los puntos (TimePoint) que se encuentren en un dia.
 	 * Hace la llamada al web service por medio de http://address:port/locations

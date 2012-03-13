@@ -12,6 +12,7 @@ import android.util.Log;
 
 import com.androidnatic.maps.model.HeatPoint;
 import com.computomovil.labIV.bean.TimePoint;
+import com.computomovil.labIV.bean.User;
 import com.google.android.maps.GeoPoint;
 
 public class JsonUtils {
@@ -54,7 +55,34 @@ public class JsonUtils {
 		
 		return jroot;
 	}
+	
+	/**
+	 * Obtiene una lista de usuarios de un objeto json
+	 * 
+	 * @param jroot formato = {"users":[{"Sim":"String","Name":"String"}]}
+	 * @return List<User>
+	 */
+	public static List<User> getUsersFromJson(JSONObject jroot) {
+		List<User> users = new ArrayList<User>();
+		JSONArray jusers;
 		
+		try {
+			jusers = jroot.getJSONArray("users");
+			for (int i = 0; i < jusers.length(); ++i) {
+				JSONObject juser = jusers.getJSONObject(i);
+				User user = new User();
+				
+				user.setSim(juser.getString("Sim"));
+				user.setName(juser.getString("Name"));
+				users.add(user);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		return users;
+	}
+	
 	/**
 	 * Obtiene una lista de TimePoints de un objeto json
 	 * 
