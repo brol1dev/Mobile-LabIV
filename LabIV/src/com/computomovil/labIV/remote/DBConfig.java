@@ -23,4 +23,10 @@ public class DBConfig {
 	public static String getHeaderValue(String key) {
 		return headers.get(key);
 	}
+	
+	public static void setHeaders(RestClient client) {
+		Set<String> hKeys = DBConfig.getHeaderKeys();
+		for (String key : hKeys)
+			client.addHeader(key, DBConfig.getHeaderValue(key));
+	}
 }

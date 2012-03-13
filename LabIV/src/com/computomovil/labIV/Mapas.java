@@ -59,14 +59,14 @@ public class Mapas extends MapActivity
 		// Se crean instancias de la base de datos y del mapa.
 		super.onCreate(bundle);
 		this.auxiliarBD = new DBHelper(this);
-		DBSender.sendLocations(this);
 		setContentView(R.layout.mapa);
 		mapview = (SimpleMapView)findViewById(R.id.mapview);
 		// Se establecen los valores de fecha y hora para los objetos TimePicker y DatePicker en base a la fecha y hora actuales.
 	    Calendar c = Calendar.getInstance();
    	  	horaInicial = reacomodar(c.get(Calendar.HOUR_OF_DAY)) + ":" + reacomodar(c.get(Calendar.MINUTE)) + ":00";
    	  	horaFinal = reacomodar(c.get(Calendar.HOUR_OF_DAY)) + ":" + reacomodar(c.get(Calendar.MINUTE)) + ":00";
-   	  	fecha = reacomodar(c.get(Calendar.YEAR)) + "-" + reacomodar(c.get(Calendar.MONTH)) + "-" + reacomodar(c.get(Calendar.DAY_OF_MONTH)); 
+   	  	fecha = reacomodar(c.get(Calendar.YEAR)) + "-" + reacomodar(c.get(Calendar.MONTH)) + "-" + reacomodar(c.get(Calendar.DAY_OF_MONTH));
+   	  	DBSender.sendLocations(this);
 	}
 	
 	@Override

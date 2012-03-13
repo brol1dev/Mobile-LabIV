@@ -78,6 +78,7 @@ public class RestClient {
 			HttpGet getRq = new HttpGet(url);
 			for (NameValuePair nvp : headers) 
 				getRq.addHeader(nvp.getName(), nvp.getValue());
+			
 			executeRequest(getRq, url);
 			break;
 

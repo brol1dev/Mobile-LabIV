@@ -1,5 +1,11 @@
 package com.computomovil.labIV;
 
+import java.util.List;
+
+import com.androidnatic.maps.model.HeatPoint;
+import com.computomovil.labIV.bean.TimePoint;
+import com.computomovil.labIV.remote.GetRequests;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -11,6 +17,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;

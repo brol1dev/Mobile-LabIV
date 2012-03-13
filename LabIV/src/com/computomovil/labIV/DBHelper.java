@@ -27,6 +27,10 @@ public class DBHelper extends SQLiteOpenHelper
 		super(context,NOMBREBD,null,1);
 	}
 	
+	public void deleteDataInTable(SQLiteDatabase db, String table) {
+		db.delete(table, "1", null);
+	}
+	
 	@Override
 	public void onCreate(SQLiteDatabase db) 
 	{
@@ -463,7 +467,7 @@ public class DBHelper extends SQLiteOpenHelper
 		
 		db.insert("usuarios", null,values);
     }
-	
+    
     public static String formatoFecha (String strFecha) {
 
 		// Los tipos Date, pueden ser creados a base de un String.
